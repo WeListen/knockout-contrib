@@ -160,7 +160,7 @@ export class Route {
           : flatten(castArray(arg as MaybeArray<NativeRouteConfig>)))
       ]
     }
-    return rawConfig.reduce(accumulateAllRouteArgs, [])
+    return rawConfig.reduce(accumulateAllRouteArgs, []) as NativeRouteConfig[]
   }
 
   private static parsePath(path: string, hasChildren: boolean) {
